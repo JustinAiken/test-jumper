@@ -36,7 +36,7 @@ module.exports =
         openthis = PATH.join(atom.project.getRootDirectory().path,openthis)
 
         if FS.existsSync openthis
-          atom.workspace.open(openthis)
+          atom.workspace.open(openthis, searchAllPanes: true)
 
         else if atom.config.get('test-jumper.x-create-files.enabled')
           src_filename = if is_spec
